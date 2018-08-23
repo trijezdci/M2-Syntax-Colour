@@ -183,7 +183,7 @@
         <!-- Base-16 Integer Literals -->
         <RegExpr attribute="Number" context="#stay" String="0[0-9A-F]*H"/>
 
-        <!-- Base-9 Integers and Character Code Literals -->
+        <!-- Base-8 Integers and Character Code Literals -->
         <RegExpr attribute="Number" context="#stay" String="[0-7]+[BC]"/>
 
         <!-- Real Number Literals -->
