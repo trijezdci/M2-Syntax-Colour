@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Modula-2" version="3" kateversion="2.2" section="Sources" extensions="*.mod;*.def" mimetype="text/x-modula-2">
+<language name="Modula-2" version="3" kateversion="2.2" section="Sources" extensions="*.mod;*.def" mimetype="text/x-modula-2" author="B.Kowarsch (trijezdci@github)">
 <!--
   *****************************************************************************
   PIM Modula-2 syntax highlighting profile for Kate
