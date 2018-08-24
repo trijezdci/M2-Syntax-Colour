@@ -232,43 +232,56 @@
         <RegExpr attribute="Number" context="#stay"
           String="([1-9][0-9]*('[0-9]+)*)|0"/>
 
-        <!-- Double-Quoted String Literals -->
+        <!-- Start of Double-Quoted String Literal -->
         <DetectChar attribute="String" context="DoubleQuotedString" char="&quot;"/>
 
-        <!-- Single-Quoted String Literals -->
+        <!-- Start of Single-Quoted String Literal -->
         <DetectChar attribute="String" context="SingleQuotedString" char="'"/>
 
-        <!-- Modula-2 Dialect Tags -->
+        <!-- Start of Modula-2 Dialect Tag -->
         <StringDetect attribute="DialectTag" context="InDialectTag" String="(*!"/>
 
-        <!-- Pragmas -->
+        <!-- Start of Pragma -->
         <Detect2Chars attribute="Pragma" context="InPragma" char="&lt;" char1="*"/>
 
-        <!-- Line Comments -->
+        <!-- Start of Line Comment -->
         <DetectChar attribute ="Comment" context="LineComment" char="!"/>
         
-        <!-- Block Comments -->
+        <!-- Start of Block Comment -->
         <Detect2Chars attribute="Comment" context="BlockComment"
           char="(" char1="*" beginRegion="FoldableComment"/>
       </context>
+
+      <!-- End of Double-Quoted String Literal -->
       <context attribute="String" lineEndContext="#pop" name="DoubleQuotedString">
         <DetectChar attribute="String" context="#pop" char="&quot;"/>
       </context>
+
+      <!-- End of Single-Quoted String Literal -->
       <context attribute="String" lineEndContext="#pop" name="SingleQuotedString">
         <DetectChar attribute="String" context="#pop" char="'" />
       </context>
+
+      <!-- End of Dialect Tag -->
       <context attribute="DialectTag" lineEndContext="#pop" name="InDialectTag">
         <Detect2Chars attribute="DialectTag" context="#pop" char="*" char1=")"/>
       </context>
 
+      <!-- End of Pragma -->
       <context attribute="Pragma" lineEndContext="#stay" name="InPragma">
         <Detect2Chars attribute="Pragma" context="#pop" char="*" char1="&gt;"/>
       </context>
 
+      <!-- End of Line Comment -->
       <context attribute="Comment" lineEndContext="#pop" name="LineComment">
       </context>
 
       <context attribute="Comment" lineEndContext="#stay" name="BlockComment">
+        <!-- Start of nessted Block Comment -->
+        <Detect2Chars attribute="Comment"
+        context="BlockComment" char="(" char1="*" beginRegion="FoldableComment"/>
+
+        <!-- End of Block Comment -->
         <Detect2Chars attribute="Comment"
         context="#pop" char="*" char1=")" endRegion="FoldableComment"/>
       </context>

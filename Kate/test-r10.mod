@@ -17,9 +17,9 @@
 
 (* foldable comments *)
 
-(* foo
-   bar
-   baz *)
+(* foo bar baz
+   (* nested comment *)
+   bam boo bee bop *)
 
 
 (* reserved words *)
@@ -56,7 +56,7 @@ UNSAFE
 
 CAST
 
-(* constants *)https://github.com/m2sf/M2-R10-Syntax-Diagrams/blob/master/m2r10-grammar.gll
+(* constants *)
 
 BitsPerAddress BitsPerByte BytesPerWord BytesPerLongWord
 
