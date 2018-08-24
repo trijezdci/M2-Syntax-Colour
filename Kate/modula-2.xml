@@ -266,7 +266,7 @@
       <itemData name="Type"
         defStyleNum="dsDataType" bold="1" italic="0" />
 
-      <!--  Style for Facilities from Module UNSAFE  -->
+      <!--  Style for Facilities from Module SYSTEM  -->
       <itemData name="Unsafe"
         defStyleNum="dsWarning" bold="1" italic="0"/>
 
