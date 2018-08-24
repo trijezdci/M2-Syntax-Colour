@@ -115,11 +115,6 @@
       <item>LONGREAL</item>
       <item>PROC</item>
       <item>REAL</item>
-
-      <!-- SYSTEM supplied -->
-      <item>ADDRESS</item>
-      <item>PROCESS</item>
-      <item>WORD</item>
     </list>
 
     <!-- Built-in Procedure Identifiers -->
@@ -142,13 +137,6 @@
       <item>SIZE</item>
       <item>TRUNC</item>
       <item>VAL</item>
-
-      <!-- SYSTEM supplied -->
-      <item>ADR</item>
-      <item>NEWPROCESS</item>
-      <item>SYSTEM</item>
-      <item>TRANSFER</item> 
-      <item>TSIZE</item>
     </list>
 
     <!-- Built-in Macros -->
@@ -160,6 +148,23 @@
       <!-- DISPOSE resolves to DEALLOCATE -->
       <item>DISPOSE</item>
       <item>DEALLOCATE</item>
+    </list>
+    
+    <!-- Module SYSTEM -->
+    <list name="unsafe">
+      <!-- Module Identifier -->
+      <item>SYSTEM</item>
+
+      <!-- Types -->
+      <item>ADDRESS</item>
+      <item>PROCESS</item>
+      <item>WORD</item>
+
+      <!-- Procedures -->
+      <item>ADR</item>
+      <item>NEWPROCESS</item>
+      <item>TRANSFER</item>
+      <item>TSIZE</item>
     </list>
 
     <contexts>
@@ -182,6 +187,9 @@
         <!-- Built-in Macro Identifiers and Translations -->
         <keyword attribute="Builtin" context="#stay" String="macros"/>
 
+        <!-- Facilities from Built-in Module SYSTEM -->
+        <keyword attribute="Unsafe" context="#stay" String="unsafe"/>
+
         <!-- Base-16 Integer Literals -->
         <RegExpr attribute="Number" context="#stay" String="0[0-9A-F]*H"/>
 
@@ -194,35 +202,48 @@
         <!-- Decimal Integer Literals -->
         <Int attribute="Number" context="#stay"/>
 
-        <!-- Double-Quoted String Literals -->
+        <!-- Start of Double-Quoted String Literal -->
         <DetectChar attribute="String" context="DoubleQuotedString" char="&quot;" />
 
-        <!-- Single-Quoted String Literals -->
+        <!-- Start of Single-Quoted String Literal -->
         <DetectChar attribute="String" context="SingleQuotedString" char="'" />
 
-        <!-- Modula-2 Dialect Tags -->
+        <!-- Start of Modula-2 Dialect Tag -->
         <StringDetect attribute="DialectTag" context="InDialectTag" String="(*!"/>
 
-        <!-- Pragmas -->
+        <!-- Start of Pragma -->
         <StringDetect attribute="Pragma" context="InPragma" String="(*$"/>
 
-        <!-- Comments -->
+        <!-- Start of Comment -->
         <Detect2Chars attribute="Comment"
           context="InComment" char="(" char1="*" beginRegion="FoldableComment"/>
       </context>
+
+      <!-- End of Double-Quoted String Literal -->
       <context attribute="String" lineEndContext="#pop" name="DoubleQuotedString">
         <DetectChar attribute="String" context="#pop" char="&quot;"/>
       </context>
+
+      <!-- End of Single-Quoted String Literal -->
       <context attribute="String" lineEndContext="#pop" name="SingleQuotedString">
         <DetectChar attribute="String" context="#pop" char="'" />
       </context>
+
+      <!-- End of Dialect Tag -->
       <context attribute="DialectTag" lineEndContext="#pop" name="InDialectTag">
         <Detect2Chars attribute="DialectTag" context="#pop" char="*" char1=")"/>
       </context>
+
+      <!-- Detect end of Pragma -->
       <context attribute="Pragma" lineEndContext="#stay" name="InPragma">
         <Detect2Chars attribute="Pragma" context="#pop" char="*" char1=")"/>
       </context>
+
       <context attribute="Comment" lineEndContext="#stay" name="InComment">
+        <!-- Detect start of nested Comment -->
+        <Detect2Chars attribute="Comment"
+        context="InComment" char="(" char1="*" beginRegion="FoldableComment"/>
+        <!-- Detect end of Comment -->
         <Detect2Chars attribute="Comment"
         context="#pop" char="*" char1=")" endRegion="FoldableComment"/>
       </context>
@@ -244,6 +265,10 @@
       <!-- Style for Built-in Type Identifiers -->
       <itemData name="Type"
         defStyleNum="dsDataType" bold="1" italic="0" />
+
+      <!--  Style for Facilities from Module UNSAFE  -->
+      <itemData name="Unsafe"
+        defStyleNum="dsWarning" bold="1" italic="0"/>
 
       <!-- Style for Built-in Procedure Identifiers -->
       <itemData name="Builtin"
