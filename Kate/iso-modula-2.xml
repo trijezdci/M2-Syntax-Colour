@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Modula-2" version="3" kateversion="2.2" section="Sources" extensions="*.mod;*.def" mimetype="text/x-modula-2" author="B.Kowarsch (trijezdci@github)">
+<language name="Modula-2 (ISO)"
+  version="1" kateversion="2.2" section="Sources" extensions="*.mod;*.def"
+  mimetype="text/x-modula-2" priotiry="2" author="B.Kowarsch (trijezdci@github)">
 <!--
   *****************************************************************************
   ISO Modula-2 syntax highlighting profile for Kate
@@ -114,7 +116,7 @@
       <item>INTERRUPTIBLE</item>
       <item>NIL</item>
       <item>TRUE</item>
-      <item>UNINTERRUPTIBLE<item>
+      <item>UNINTERRUPTIBLE</item>
 
       <!-- SYSTEM supplied -->
       <item>BITSPERLOC</item>
@@ -170,7 +172,7 @@
       <item>VAL</item>
 
       <!-- SYSTEM supplied -->
-      <item>ADDADR<item>
+      <item>ADDADR</item>
       <item>ADR</item>
       <item>CAST</item>
       <item>DIFADR</item>
@@ -235,7 +237,7 @@
         <StringDetect attribute="DialectTag" context="InDialectTag" String="(*!"/>
 
         <!-- Pragmas -->
-        <Detect2Chars attribute="Pragma" context="InPragma" char="<" char1="*"/>
+        <Detect2Chars attribute="Pragma" context="InPragma" char="&lt;" char1="*"/>
 
         <!-- Comments -->
         <Detect2Chars attribute="Comment"
@@ -251,7 +253,7 @@
         <Detect2Chars attribute="DialectTag" context="#pop" char="*" char1=")"/>
       </context>
       <context attribute="Pragma" lineEndContext="#stay" name="InPragma">
-        <Detect2Chars attribute="Pragma" context="#pop" char="*" char1=">"/>
+        <Detect2Chars attribute="Pragma" context="#pop" char="*" char1="&gt;"/>
       </context>
       <context attribute="Comment" lineEndContext="#stay" name="InComment">
         <Detect2Chars attribute="Comment"
