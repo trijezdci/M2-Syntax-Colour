@@ -7,7 +7,7 @@ Syntax Descriptions for Colouring/Highlighting Modula-2
 * Modula-2 R10
 
 ### Supported Web Frameworks
-* GeSHi
+* GeSHi (at present PIM only)
 * Pygments
 
 ### Supported Editors/IDEs
