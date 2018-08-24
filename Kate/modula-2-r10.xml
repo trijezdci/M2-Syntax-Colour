@@ -11,14 +11,18 @@
   
   Licensed under the MIT license <https://opensource.org/licenses/MIT>  
 
-  The authoritative reference for Modula-2 R10 is available online at:
+  A reference for the Modula-2 R10 BSK subset is available online at:
 
   https://github.com/m2sf/m2bsk/wiki/Language-Description
 
-  In Modula-2 terminology, keywords are called reserved words.  A list is
-  given at:
+  In Modula-2 terminology, keywords are called reserved words.
   
   https://github.com/m2sf/m2bsk/wiki/Language-Description#reserved-words.
+
+  Additional reserved words are available in the fulls spec for which the
+  specification is outdated and being revised. The EBNF is available at:
+
+  https://github.com/m2sf/M2-R10-Syntax-Diagrams/blob/master/m2r10-grammar.gll
   
   There are two kinds of built-in identifiers:  
 
@@ -51,6 +55,8 @@
       <item>ARGLIST</item>
       <item>ARRAY</item>
       <item>BEGIN</item>
+      <item>BLUEPRINT</item>
+      <item>BY</item>
       <item>CASE</item>
       <item>CONST</item>
       <item>COPY</item>
@@ -62,6 +68,8 @@
       <item>END</item>
       <item>EXIT</item>
       <item>FOR</item>
+      <item>FROM</item>
+      <item>GENLIB</item>
       <item>IF</item>
       <item>IMPLEMENTATION</item>
       <item>IMPORT</item>
@@ -78,8 +86,10 @@
       <item>PROCEDURE</item>
       <item>READ</item>
       <item>RECORD</item>
+      <item>REFERENTIAL</item>
       <item>RELEASE</item>
       <item>REPEAT</item>
+      <item>RETAIN</item>
       <item>RETURN</item>
       <item>SET</item>
       <item>THEN</item>
@@ -89,6 +99,7 @@
       <item>VAR</item>
       <item>WHILE</item>
       <item>WRITE</item>
+      <item>YIELD</item>
     </list>
 
     <!-- Built-in Constant Identifiers -->
