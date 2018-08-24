@@ -4,12 +4,16 @@
 #### Dialects
 
 ##### PIM Modula-2
+* Kate Menu: Modula-2
 * modula-2.xml
 * test.mod
 
 ##### ISO Modula-2
+* Kate Menu: Modula-2 (ISO)
 * iso-modula-2.xml
-* iso-test.mod
+* test-iso.mod
 
 ##### Modula-2 R10
-* TO DO
+* Kate Menu: Modula-2 (R10)
+* modula-2-r10.xml
+* test-r10.mod
