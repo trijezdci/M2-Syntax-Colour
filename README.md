@@ -6,8 +6,9 @@ Syntax Descriptions for Colouring/Highlighting Modula-2
 * ISO Modula-2 (ISO 10514)
 * Modula-2 R10
 
-### Supported Web Frameworks
-* GeSHi (at present PIM only)
+### Supported Frameworks
+* GeSHi (PIM only)
+* Highlight (PIM only)
 * Pygments
 
 ### Supported Editors/IDEs
