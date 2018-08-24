@@ -234,16 +234,16 @@
         <Detect2Chars attribute="DialectTag" context="#pop" char="*" char1=")"/>
       </context>
 
-      <!-- Detect end of Pragma -->
+      <!-- End of Pragma -->
       <context attribute="Pragma" lineEndContext="#stay" name="InPragma">
         <Detect2Chars attribute="Pragma" context="#pop" char="*" char1=")"/>
       </context>
 
       <context attribute="Comment" lineEndContext="#stay" name="InComment">
-        <!-- Detect start of nested Comment -->
+        <!-- Start of nested Comment -->
         <Detect2Chars attribute="Comment"
         context="InComment" char="(" char1="*" beginRegion="FoldableComment"/>
-        <!-- Detect end of Comment -->
+        <!-- End of Comment -->
         <Detect2Chars attribute="Comment"
         context="#pop" char="*" char1=")" endRegion="FoldableComment"/>
       </context>
