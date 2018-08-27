@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Modula-2 (ISO)"
-  version="1" kateversion="2.2" section="Sources" extensions="*.mod;*.def"
-  mimetype="text/x-modula-2" priotiry="2" author="B.Kowarsch (trijezdci@github)">
+<language name="Modula-2 (ISO)" mimetype="text/x-modula2" version="1"
+  kateversion="2.2" section="Sources" priority="2" extensions="*.mod;*.def"
+  casesensitive="1"  author="B. Kowarsch (trijezdci@github)"  license="MIT">
 <!--
   *****************************************************************************
   ISO Modula-2 syntax highlighting profile for Kate
