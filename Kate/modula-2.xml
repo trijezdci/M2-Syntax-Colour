@@ -189,7 +189,6 @@
       <item>CARDINAL</item>
       <item>CHAR</item>
       <item>INTEGER</item>
-      <item>LONGINT</item>
       <item>LONGREAL</item>
       <item>REAL</item>
     </list>
@@ -565,7 +564,6 @@
       <item>CHAR</item>
       <item>INTEGER</item>
       <item>LONGCOMPLEX</item>
-      <item>LONGINT</item>
       <item>LONGREAL</item>
       <item>PROC</item>
       <item>PROTECTION</item>
