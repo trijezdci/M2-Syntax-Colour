@@ -1,19 +1,29 @@
 # Kate M2-Syntax-Colour
-### Modula-2 Syntax Description for the Kate Editor
+### Modula-2 Syntax Profiles for the Kate Editor
 
-#### Dialects
+#### Supported Dialects
+* PIM Modula-2
+* ISO Modula-2
+* Modula-2 R10
 
-##### PIM Modula-2
-* Kate Menu: Modula-2
-* modula-2.xml
-* test.mod
+#### Profiles
+
+##### Multi-Dialect (Default)
+* auto-detection of dialect
+* Kate Menu: `Modula-2`
+* File: modula-2.xml
+
+##### PIM Modula-2 Profile
+* for manual dialect selection
+* Kate Menu: `Modula-2 (PIM-only)`
+* File: modula-2.pim.xml
 
 ##### ISO Modula-2
-* Kate Menu: Modula-2 (ISO)
-* iso-modula-2.xml
-* test-iso.mod
+* for manual dialect selection
+* Kate Menu: `Modula-2 (ISO-only)`
+* File: modula-2.iso.xml
 
 ##### Modula-2 R10
-* Kate Menu: Modula-2 (R10)
-* modula-2-r10.xml
-* test-r10.mod
+* for manual dialect selection
+* Kate Menu: `Modula-2 (R10-only)`
+* File: modula-2.r10.xml
