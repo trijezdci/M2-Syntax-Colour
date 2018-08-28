@@ -16,14 +16,14 @@
 ##### PIM Modula-2 Profile
 * for manual dialect selection
 * Kate Menu: `Modula-2 (PIM-only)`
-* File: modula-2.pim.xml
+* File: modula-2-pim-only.xml
 
 ##### ISO Modula-2
 * for manual dialect selection
 * Kate Menu: `Modula-2 (ISO-only)`
-* File: modula-2.iso.xml
+* File: modula-2-iso-only.xml
 
 ##### Modula-2 R10
 * for manual dialect selection
 * Kate Menu: `Modula-2 (R10-only)`
-* File: modula-2.r10.xml
+* File: modula-2-r10-only.xml
