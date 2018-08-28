@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Modula-2" mimetype="text/x-modula2" version="4"
+<language name="Modula-2 (PIM only)" mimetype="text/x-modula2" version="1"
   kateversion="2.2" section="Sources" priority="4" extensions="*.mod;*.def"
   casesensitive="1"  author="B. Kowarsch (trijezdci@github)"  license="MIT">
 <!--
@@ -8,8 +8,8 @@
   PIM Modula-2 syntax highlighting profile for Kate
 
   Copyright (C) 2018 Modula-2 Software Foundation
-  
-  Licensed under the MIT license <https://opensource.org/licenses/MIT>  
+
+  Licensed under the MIT license <https://opensource.org/licenses/MIT>
 
   The authoritative reference for classic Modula-2 is Niklaus Wirth's monograph
   "Programming in Modula-2" published by Springer, Heidelberg, commonly known
@@ -32,7 +32,7 @@
   identifiers are hardcoded into the language.  For the purpose of syntax
   highlighting, they should therefore  be treated as built-in identifiers.
   Identifiers exported by built-in module SYSTEM are given in PIM4, page 121.
-  
+
   In Modula-2 terminology, there are two kinds of procedures: those that return
   a result in their own name, and those that do not.  When it is necessary to
   differentiate, the former are called function procedures and the latter
@@ -149,7 +149,7 @@
       <item>DISPOSE</item>
       <item>DEALLOCATE</item>
     </list>
-    
+
     <!-- Module SYSTEM -->
     <list name="unsafe">
       <!-- Module Identifier -->
@@ -281,11 +281,11 @@
       <!-- Style for Quoted Literals -->
       <itemData name="String"
         defStyleNum="dsString" bold="0" italic="0" />
-     
+
       <!-- Style for Dialect Tags -->
       <itemData name="DialectTag"
         defStyleNum="dsComment" bold="1" italic="0" />
- 
+
       <!-- Style for Pragmas -->
       <itemData name="Pragma"
         defStyleNum="dsPreprocessor" bold="1" italic="0" />
