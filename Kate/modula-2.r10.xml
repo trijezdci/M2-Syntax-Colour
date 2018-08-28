@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Modula-2 (R10)" mimetype="text/x-modula2" version="1"
-  kateversion="2.2" section="Sources" priority="3" extensions="*.mod;*.def"
+<language name="Modula-2 (R10 only)" mimetype="text/x-modula2" version="1"
+  kateversion="2.2" section="Sources" priority="2" extensions="*.mod;*.def"
   casesensitive="1"  author="B. Kowarsch (trijezdci@github)"  license="MIT">
 <!--
   *****************************************************************************
   Modula-2 R10 syntax highlighting profile for Kate
 
   Copyright (C) 2018 Modula-2 Software Foundation
-  
-  Licensed under the MIT license <https://opensource.org/licenses/MIT>  
+
+  Licensed under the MIT license <https://opensource.org/licenses/MIT>
 
   A reference for the Modula-2 R10 BSK subset is available online at:
 
   https://github.com/m2sf/m2bsk/wiki/Language-Description
 
   In Modula-2 terminology, keywords are called reserved words.
-  
+
   https://github.com/m2sf/m2bsk/wiki/Language-Description#reserved-words.
 
   Additional reserved words are available in the fulls spec for which the
   specification is outdated and being revised. The EBNF is available at:
 
   https://github.com/m2sf/M2-R10-Syntax-Diagrams/blob/master/m2r10-grammar.gll
-  
-  There are two kinds of built-in identifiers:  
+
+  There are two kinds of built-in identifiers:
 
   (1) Predefined identifiers, also known as pervasives are listed at:
-  
+
   https://github.com/m2sf/m2bsk/wiki/Language-Description#predefined-identifiers
-  
+
   (2) Identifiers provided by built-in Module UNSAFE are listed at:
-  
-  https://github.com/m2sf/m2bsk/wiki/Language-Description#low-level-facilities  
-  
+
+  https://github.com/m2sf/m2bsk/wiki/Language-Description#low-level-facilities
+
   In Modula-2 terminology, there are two kinds of procedures: those that return
   a result in their own name, and those that do not.  When it is necessary to
   differentiate, the former are called function procedures and the latter
@@ -193,7 +193,7 @@
       <!-- Macros -->
       <item>NOP</item>
     </list>
-    
+
     <contexts>
       <context attribute="Plain Source" lineEndContext="#stay" name="plain">
         <!-- BUG: first entry is ignored, leave Dummy at first position -->
@@ -246,7 +246,7 @@
 
         <!-- Start of Line Comment -->
         <DetectChar attribute ="Comment" context="LineComment" char="!"/>
-        
+
         <!-- Start of Block Comment -->
         <Detect2Chars attribute="Comment" context="BlockComment"
           char="(" char1="*" beginRegion="FoldableComment"/>
@@ -319,11 +319,11 @@
       <!-- Style for Quoted Literals -->
       <itemData name="String"
         defStyleNum="dsString" bold="0" italic="0" />
-     
+
       <!-- Style for Dialect Tags -->
       <itemData name="DialectTag"
         defStyleNum="dsComment" bold="1" italic="0" />
- 
+
       <!-- Style for Pragmas -->
       <itemData name="Pragma"
         defStyleNum="dsPreprocessor" bold="1" italic="0" />
