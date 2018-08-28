@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
-<language name="Modula-2 (ISO)" mimetype="text/x-modula2" version="1"
-  kateversion="2.2" section="Sources" priority="2" extensions="*.mod;*.def"
+<language name="Modula-2 (ISO only)" mimetype="text/x-modula2" version="1"
+  kateversion="2.2" section="Sources" priority="3" extensions="*.mod;*.def"
   casesensitive="1"  author="B. Kowarsch (trijezdci@github)"  license="MIT">
 <!--
   *****************************************************************************
   ISO Modula-2 syntax highlighting profile for Kate
 
   Copyright (C) 2018 Modula-2 Software Foundation
-  
-  Licensed under the MIT license <https://opensource.org/licenses/MIT>  
+
+  Licensed under the MIT license <https://opensource.org/licenses/MIT>
 
   This profile covers ISO Modula-2 (ISO 10514-1) by ISO/IEC/TC1/SC22/WG13.
 
@@ -32,7 +32,7 @@
 
   Identifiers provided by built-in module SYSTEM are given at:
 
-  https://www.excelsior-usa.com/doc/xds/isom204.html#306 
+  https://www.excelsior-usa.com/doc/xds/isom204.html#306
 
   Procedures ALLOCATE and DEALLOCATE to which macros NEW and DISPOSE resolve
   are given under the subsections for procedures NEW and DISPOSE. Although
@@ -40,7 +40,7 @@
   identifiers are hardcoded into the language.  For the purpose of syntax
   highlighting, they should therefore  be treated as built-in identifiers.
   Identifiers exported by built-in module SYSTEM are given in PIM4, page 121.
-  
+
   In ISO Modula-2 terminology, there are two kinds of procedures: those that
   return a result in their own name, and those that do not.  When necessary to
   differentiate between them, the former are called function procedures and
@@ -315,11 +315,11 @@
       <!-- Style for Quoted Literals -->
       <itemData name="String"
         defStyleNum="dsString" bold="0" italic="0" />
-     
+
       <!-- Style for Dialect Tags -->
       <itemData name="DialectTag"
         defStyleNum="dsComment" bold="1" italic="0" />
- 
+
       <!-- Style for Pragmas -->
       <itemData name="Pragma"
         defStyleNum="dsPreprocessor" bold="1" italic="0" />
