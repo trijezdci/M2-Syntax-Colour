@@ -13,7 +13,7 @@
 * Kate Menu: `Modula-2`
 * File: [modula-2.xml](modula-2.xml)
 
-##### PIM Modula-2 Profile
+##### PIM Modula-2
 * for manual dialect selection
 * Kate Menu: `Modula-2 (PIM-only)`
 * File: [modula-2-pim-only.xml](modula-2-pim-only.xml])
