@@ -6,7 +6,7 @@ files for Modula-2 dialects need to be added.
 
 ### Adding Dialect Specific Syntax Descriptions ####
 
-(1) find your Vim runtime directory
+(1) **find** your Vim runtime directory
 
 (2) **copy** the files
 
