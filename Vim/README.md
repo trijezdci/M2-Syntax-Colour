@@ -15,7 +15,8 @@ files for Modula-2 dialects need to be added.
 * `m2r10.vim`
 
 into the syntax directory below the runtime directory,
-then **remove** the file
+
+(3) **remove** the file
 
 * `modula2.vim`
 
