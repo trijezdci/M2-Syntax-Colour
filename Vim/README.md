@@ -58,6 +58,6 @@ Start the patched Vim executable and open the files
 to verify file recognition and syntax colouring.
 
 Further, check the Syntax menu for a new Modula-2 submenu.
-The submenu should have three choices: RIM, ISO and R10.
+The submenu should have three choices: PIM, ISO and R10.
 
 +++
