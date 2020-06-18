@@ -10,14 +10,14 @@ files for Modula-2 dialects need to be added.
 
 (2) **copy** the files
 
-* m2pim.vim
-* m2iso.vim
-* m2r10.vim
+* `m2pim.vim`
+* `m2iso.vim`
+* `m2r10.vim`
 
 into the syntax directory below the runtime directory,
 then **remove** the file
 
-* modula2.vim
+* `modula2.vim`
 
 from that directory.
 
@@ -25,12 +25,12 @@ from that directory.
 
 Follow the instructions in file
 
-* syntax-menu.vim
+* `syntax-menu.vim`
 
 to **patch** (edit) the files
 
-* makemenu.vim
-* synmenu.vim
+* `makemenu.vim`
+* `synmenu.vim`
 
 within the Vim runtime directory.
 
@@ -38,12 +38,12 @@ within the Vim runtime directory.
 
 Follow the instructions in files
 
-* filetype-def.vim
-* filetype-mod.vim
+* `filetype-def.vim`
+* `filetype-mod.vim`
 
 to **patch** (edit) the file
 
-* filetype.vim
+* `filetype.vim`
 
 within the Vim runtime directory.
 
@@ -51,9 +51,9 @@ within the Vim runtime directory.
 
 Start the patched Vim executable and open the files
 
-* vimtest-pim.def
-* vimtest-iso.def
-* vimtest-r10.def
+* `vimtest-pim.def`
+* `vimtest-iso.def`
+* `vimtest-r10.def`
 
 to verify file recognition and syntax colouring.
 
