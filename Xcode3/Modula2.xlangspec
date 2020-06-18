@@ -1,0 +1,181 @@
+/* Xcode 3.x language specification for PIM Modula-2
+ *
+ * This file allows Xcode 3.x to do syntax colouring for Modula-2 source files.
+ * It has to be installed into the following directory:
+ *
+ * ~/Library/Application Support/Developer/Shared/Xcode/Specifications/
+ *
+ * Xcode needs to be relaunched after the file has been installed. The syntax
+ * colouring scheme can then be chosen from the View->Syntax colouring  menu.
+ *
+ *
+ * Copyright (C) 2009, Benjamin Kowarsch. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * (1) Hosting of  this  file, or any parts thereof, on websites which contain
+ *     advertising is expressly forbidden and requires specific prior written
+ *     permission.  However,  university websites are exempt from this
+ *     restriction.  This exemption may be withdrawn if abused.
+ *
+ * (2) Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *
+ * (3) Redistributions in binary form must reproduce the above copyright
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and other materials provided with the distribution.
+ *
+ * (4) Neither the author's name nor the names of any contributors may be used
+ *     to endorse or promote products derived from this software without
+ *     specific prior written permission.
+ *
+ * (5) Where this list of conditions or the following disclaimer, in part or
+ *     as a whole is overruled or nullified by applicable law, no permission
+ *     is granted to use the software.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,  BUT NOT LIMITED TO,  THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY  AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT  SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE  FOR  ANY  DIRECT,  INDIRECT,  INCIDENTAL,  SPECIAL,  EXEMPLARY,  OR
+ * CONSEQUENTIAL  DAMAGES  (INCLUDING,  BUT  NOT  LIMITED  TO,  PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES;  LOSS OF USE,  DATA,  OR PROFITS; OR BUSINESS
+ * INTERRUPTION)  HOWEVER  CAUSED  AND ON ANY THEORY OF LIABILITY,  WHETHER IN
+ * CONTRACT,  STRICT LIABILITY,  OR TORT  (INCLUDING NEGLIGENCE  OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,  EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+// file version 1.00, May 21, 2009
+
+(
+
+// ---------------------------------------------------------------------------
+// Keywords and identifiers
+// ---------------------------------------------------------------------------
+
+    {
+        Identifier = "xcode.lang.modula2.keyword";
+        Syntax = {
+            StartChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Words = (
+            /* reserved words */
+            "AND",
+            "ARRAY",
+            "BEGIN",
+            "BY",
+            "CASE",
+            "CONST",
+            "DEFINITION",
+            "DIV",
+            "DO",
+            "ELSE",
+            "ELSIF",
+            "END",
+            "EXIT",
+            "EXPORT",
+            "FOR",
+            "FROM",
+            "IF",
+            "IMPLEMENTATION",
+            "IMPORT",
+            "IN",
+            "LOOP",
+            "MOD",
+            "MODULE",
+            "NOT",
+            "OF",
+            "OR",
+            "POINTER",
+            "PROCEDURE",
+            "QUALIFIED",
+            "RECORD",
+            "REPEAT",
+            "RETURN",
+            "SET",
+            "THEN",
+            "TO",
+            "TYPE",
+            "UNTIL",
+            "VAR",
+            "WHILE",
+            "WITH",
+            /* pervasive identifiers */
+            "ABS",
+            "BITSET",
+            "BOOLEAN",
+            "CAP",
+            "CARDINAL",
+            "CHAR",
+            "CHR",
+            "DEC",
+            "EXCL",
+            "FALSE",
+            "FLOAT",
+            "HALT",
+            "HIGH",
+            "INC",
+            "INCL",
+            "INTEGER",
+            "LONGINT",
+            "LONGREAL",
+            "MAX",
+            "MIN",
+            "NIL",
+            "ODD",
+            "ORD",
+            "PROC",
+            "REAL",
+            "SIZE",
+            "TRUE",
+            "TRUNC",
+            "VAL"
+        );
+            Type = "xcode.syntax.keyword";
+            AltType = "xcode.syntax.identifier";    // non-keywords are identifiers
+        };
+    },
+
+
+// ---------------------------------------------------------------------------
+// Strings, numbers and comments
+// ---------------------------------------------------------------------------
+
+    {
+        Identifier = "xcode.lang.modula2";
+        Description = "Modula-2 Colouring";
+        BasedOn = "xcode.lang.simpleColoring";
+        IncludeInMenu = YES;
+        Name = "Modula2";
+        Syntax = {
+            IncludeRules = (
+                "xcode.lang.modula2.comment",
+                "xcode.lang.string.singlequote",
+                "xcode.lang.string",
+                "xcode.lang.number",
+                "xcode.lang.modula2.keyword",
+            );
+            Type = "xcode.syntax.plain";
+        };
+    },
+    
+    {
+        Identifier = "xcode.lang.modula2.comment";
+        Syntax = {
+            Start = "(*";
+            End = "*)";
+            Foldable = YES;
+            IncludeRules = (
+                "xcode.lang.url",
+                "xcode.lang.url.mail",
+                "xcode.lang.comment.mark"
+            );
+            Type = "xcode.syntax.comment";
+        };
+    }
+)
+
+// END OF FILE
