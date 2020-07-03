@@ -1,0 +1,70 @@
+%%% ISO Modula-2 in-situ definition for use with LaTeX Listings package
+%
+%   Released into the Public Domain
+%
+\lstdefinelanguage{m2iso}{
+  % Reserved words
+  keywords=[1]{
+    AND, ARRAY, BEGIN, BY, CASE, CONST, DEFINITION, DIV, DO, ELSE, ELSIF,
+    EXCEPT, END, EXIT, EXPORT, FINALLY, FOR, FORWARD, FROM, IF,IMPLEMENTATION,
+    IMPORT, IN, LOOP, MOD, MODULE, NOT, OF, OR, PACKEDSET,POINTER, PROCEDURE,
+    QUALIFIED, RECORD, REM, REPEAT, RETRY, RETURN, SET, THEN, TO, TYPE, UNTIL,
+    VAR, WHILE, WITH 
+  },
+  % Pervasive Identifiers
+  keywords=[2]{
+    ABS, BITSET, BOOLEAN, CAP, CARDINAL, CHAR, CHR, CMPLX, COMPLEX, DEC,
+    DISPOSE, EXCL, FALSE, FLOAT, HALT, HIGH, IM, INC, INCL, INT, INTEGER,
+    INTERRUPTIBLE, LENGTH, LFLOAT, LONGCOMPLEX, LONGINT, LONGREAL, MIN, MAX,
+    NEW, NIL, ODD, ORD, PROC, PROTECTION, RE, REAL, SIZE, TRUE, TRUNC,
+    UNINTERRUPTIBLE, VAL 
+  },
+  sensitive=true,
+  string=[b]{'},
+  morestring=[b]{"},
+  comment=[n]{(*}{*)},
+  % Latex escape
+  escapeinside={?}{?}
+}
+%
+% Modula-2 typesetting style with frame
+%
+\newcommand\darkgraytt[1]{\textcolor{darkgray!80}{\texttt{#1}}}
+\newcommand\boldgray[1]{\textcolor{gray}{\textbf{#1}}}
+%
+\lstdefinestyle{modula2}{
+  language=m2iso,
+  xleftmargin=2mm,
+  xrightmargin=2mm,
+  frame=trbl,
+  framexleftmargin=1mm,
+  framexrightmargin=1mm,
+  rulecolor=\color{gray},
+  backgroundcolor=\color{gray!10}, % faint grey
+  basicstyle=\setfont{DejaVuSansMono-TLF},
+  % reserved words
+  keywordstyle={[1]\textbf},
+  % pervasive identifiers
+  keywordstyle={[2]\texttt},
+  % string style
+  stringstyle=\darkgraytt,
+  % comment style
+  commentstyle=\italicgray,
+  % pragma style
+  delim=[s][\boldgray]{<*}{*>}
+}
+%
+% Modula2 Environment
+%
+% usage:
+%
+% \begin{Modula2}
+% source code goes here
+% \end{Modula2)
+%
+\lstnewenvironment{Modula2}
+  {\renewcommand{\:}{\;:\;}\vspace{0.5ex}\lstset{language=m2iso, style=modula2}}
+  {\vspace{0.5ex}}
+%
+% END OF FILE
+

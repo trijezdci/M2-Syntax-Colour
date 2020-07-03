@@ -1,0 +1,74 @@
+%%% Modula-2 R10 in-situ definition for use with LaTeX Listings package
+%
+%   Released into the Public Domain
+%
+\lstdefinelanguage{m2r10}{
+  % Reserved words
+  keywords=[1]{
+    ALIAS, AND, ARGLIST, ARRAY, BEGIN, BLUEPRINT, CASE, CONST, COPY,
+    DEFINITION, DIV, DO, ELSE, ELSIF, END, EXIT, FOR, GENLIB, IF,
+    IMPLEMENTATION, IMPORT, IN, LOOP, MOD, MODULE, NEW, NOP, NOT, OCTETSEQ,
+    OF, OPAQUE, OR, POINTER, PROCEDURE, READ, RECORD, REFERENTIAL, RELEASE,
+    REPEAT, RETAIN, RETURN, SET, THEN, TO, TYPE, UNTIL, VAR, WHILE, WRITE,
+    YIELD
+  },
+  % Schroedinger's tokens
+  morekeywords=[1]{
+    ADDRESS, CAPACITY, CAST, COROUTINE, NIL
+  },
+  % Pervasive Identifiers
+  keywords=[2]{
+    ABS, APPEND, BOOLEAN, CARDINAL, CHAR, CHR, COUNT, ENTIER, FALSE, FIRST,
+    INSERT, INTEGER, LAST, LENGTH, LOG2, LONGCARD, LONGINT, LONGREAL, MAX,
+    MIN, OCTET, ODD, ORD, POW2, PRED, PTR, REAL, REMOVE, SGN, SUCC, TLIMIT,
+    TMAX, TMIN, TRUE, TSIZE, UCHR, UNICHAR, UNIVSET
+  },
+  sensitive=true,
+  string=[b]{'},
+  morestring=[b]{"},
+  comment=[l]{!},
+  morecomment=[n]{(*}{*)},
+  % Latex escape
+  escapeinside={?}{?}
+}
+%
+% Modula-2 typesetting style with frame
+%
+\newcommand\darkgraytt[1]{\textcolor{darkgray!80}{\texttt{#1}}}
+\newcommand\boldgray[1]{\textcolor{gray}{\textbf{#1}}}
+%
+\lstdefinestyle{modula2}{
+  language=m2r10,
+  xleftmargin=2mm,
+  xrightmargin=2mm,
+  frame=trbl,
+  framexleftmargin=1mm,
+  framexrightmargin=1mm,
+  rulecolor=\color{gray},
+  backgroundcolor=\color{gray!10}, % faint grey
+  basicstyle=\setfont{DejaVuSansMono-TLF},
+  % reserved words
+  keywordstyle={[1]\textbf},
+  % pervasive identifiers
+  keywordstyle={[2]\texttt},
+  % string style
+  stringstyle=\darkgraytt,
+  % comment style
+  commentstyle=\italicgray,
+  % pragma style
+  delim=[s][\boldgray]{<*}{*>}
+}
+%
+% Modula2 Environment
+%
+% usage:
+%
+% \begin{Modula2}
+% source code goes here
+% \end{Modula2)
+%
+\lstnewenvironment{Modula2}
+  {\renewcommand{\:}{\;:\;}\vspace{0.5ex}\lstset{language=m2r10, style=modula2}}
+  {\vspace{0.5ex}}
+%
+% END OF FILE
