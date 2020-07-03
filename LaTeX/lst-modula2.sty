@@ -1,0 +1,93 @@
+<*lang3>
+%%
+%% Modula-2 language definitions for the LaTeX Listings package.
+%%
+%% https://github.com/trijezdci/M2-Syntax-Colour/tree/master/LaTeX
+%%
+%% Released into the Public Domain
+%%
+%
+% Dialect: PIM Modula-2
+% Specified in: Niklaus Wirth, "Programming in Modula-2", 4th edition
+%   ISBN 0-387-50150-9, Springer-Verlag, New York Heidelberg Berlin, 1988.
+%
+\lst@definelanguage[PIM]{Modula-2}%
+%
+% Reserved words
+%
+{ morekeywords={ AND, ARRAY, BEGIN, BY, CASE, CONST, DEFINITION, DIV, DO,%
+    ELSE, ELSIF, END, EXIT, EXPORT, FOR, FROM, IF, IMPLEMENTATION, IMPORT,%
+    IN, LOOP, MOD, MODULE, NOT, OF, OR, POINTER, PROCEDURE, QUALIFIED,%
+    RECORD, REPEAT, RETURN, SET, THEN, TO, TYPE, UNTIL, VAR, WHILE, WITH },%
+%
+% Predefined identifiers
+%
+  morekeywords=[2]{ ABS, BITSET, BOOLEAN, CAP, CARDINAL, CHAR, CHR, DEC,%
+    DISPOSE, EXCL, FALSE, FLOAT, HALT, HIGH, INC, INCL, INTEGER, LONGINT,%
+    LONGREAL,% MAX, MIN, NEW, NIL, ODD, ORD, PROC, REAL, SIZE, TRUNC, VAL },%
+  sensitive=true,%
+  string=[b]{'},%
+  morestring=[b]{"},%
+  comment=[n]{(*}{*)}%
+}[keywords,comments,strings]%
+%
+% Dialect: ISO Modula-2
+% Specified in: ISO/IEC JTC1/SC22/WG13, Information Technology --
+%   Programming Languages -- Part 1: Modula-2, Base Language.
+%   International Standard 10514-1, ISO/IEC, Geneva, 1996.
+%
+\lst@definelanguage[ISO]{Modula-2}%
+%
+% Reserved words
+%
+{ morekeywords={ AND, ARRAY, BEGIN, BY, CASE, CONST, DEFINITION, DIV, DO,%
+    ELSE, ELSIF, EXCEPT, END, EXIT, EXPORT, FINALLY, FOR, FORWARD, FROM, IF,%
+    IMPLEMENTATION, IMPORT, IN, LOOP, MOD, MODULE, NOT, OF, OR, PACKEDSET,%
+    POINTER, PROCEDURE, QUALIFIED, RECORD, REM, REPEAT, RETRY, RETURN, SET,%
+    THEN, TO, TYPE, UNTIL, VAR, WHILE, WITH },%
+%
+% Predefined Identifiers
+%
+  morekeywords=[2]{ ABS, BITSET, BOOLEAN, CAP, CARDINAL, CHAR, CHR, CMPLX,%
+    COMPLEX, DEC, DISPOSE, EXCL, FALSE, FLOAT, HALT, HIGH, IM, INC, INCL,%
+    INT, INTEGER, INTERRUPTIBLE, LENGTH, LFLOAT, LONGCOMPLEX, LONGINT,%
+    LONGREAL, MIN, MAX, NEW, NIL, ODD, ORD, PROC, PROTECTION, RE, REAL,%
+    SIZE, TRUE, TRUNC, UNINTERRUPTIBLE, VAL }%
+  sensitive=true,%
+  string=[b]{'},%
+  morestring=[b]{"},%
+  comment=[n]{(*}{*)}%
+}[keywords,comments,strings]%
+%
+% Dialect: Modula-2 Revision 2010
+% Specified in: Kowarsch & Sutcliffe, Modula-2 Revision 2010 --
+%   Language Report, Modula-2 Software Foundation, 2016.
+%
+\lst@definelanguage[R10]{Modula-2}%
+%
+% Reserved words
+%
+{ morekeywords={ ALIAS, AND, ARGLIST, ARRAY, BEGIN, BLUEPRINT, CASE, CONST,%
+    COPY, DEFINITION, DIV, DO, ELSE, ELSIF, END, EXIT, FOR, GENLIB, IF,%
+    IMPLEMENTATION, IMPORT, IN, LOOP, MOD, MODULE, NEW, NOP, NOT, OCTETSEQ,%
+    OF, OPAQUE, OR, POINTER, PROCEDURE, READ, RECORD, REFERENTIAL, RELEASE,%
+    REPEAT, RETAIN, RETURN, SET, THEN, TO, TYPE, UNTIL, VAR, WHILE, WRITE,%
+    YIELD },%
+%
+% Schroedinger's tokens
+%
+  morekeywords={ ADDRESS, CAPACITY, CAST, COROUTINE, NIL },%
+%
+% Predefined identifiers
+%
+  morekeywords=[2]{ ABS, APPEND, BOOLEAN, CARDINAL, CHAR, CHR, COUNT, ENTIER,%
+    FALSE, FIRST, INSERT, INTEGER, LAST, LENGTH, LOG2, LONGCARD, LONGINT,%
+    LONGREAL, MAX, MIN, OCTET, ODD, ORD, POW2, PRED, PTR, REAL, REMOVE, SGN,%
+    SUCC, TLIMIT, TMAX, TMIN, TRUE, TSIZE, UCHR, UNICHAR, UNIVSET },%
+  sensitive=true,%
+  string=[b]{'},%
+  morestring=[b]{"},%
+  comment=[n]{(*}{*)}%
+}[keywords,comments,strings]%
+</lang3>
+
