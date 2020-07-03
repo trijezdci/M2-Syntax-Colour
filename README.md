@@ -9,6 +9,7 @@ Syntax Descriptions for Colouring/Highlighting Modula-2
 ### Supported Frameworks
 * GeSHi (PIM only)
 * Highlight (PIM only)
+* LaTeX Listings package
 * Pygments
 
 ### Supported Editors/IDEs
