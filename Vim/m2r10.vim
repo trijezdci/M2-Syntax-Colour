@@ -57,15 +57,15 @@ syn case match
 " Note: MODULE, PROCEDURE and END are defined separately further below
 syn keyword m2Resword ALIAS AND ARGLIST ARRAY BEGIN CASE CONST COPY DEFINITION
 syn keyword m2Resword DIV DO ELSE ELSIF EXIT FOR FROM GENLIB IF IMPLEMENTATION
-syn keyword m2Resword IMPORT IN LOOP MOD NEW NOT OF OPAQUE OR POINTER READ
-syn keyword m2Resword RECORD RELEASE REPEAT RETAIN RETURN SET THEN TO TYPE
+syn keyword m2Resword IMPORT IN LOOP MOD NEW NOP NOT OCTETSEQ OF OPAQUE OR
+syn keyword POINTER READ RECORD RELEASE REPEAT RETAIN RETURN SET THEN TO TYPE
 syn keyword m2Resword UNTIL VAR WHILE WRITE YIELD
 
 
 " -----------------------------------------------------------------------------
 " Schroedinger's Tokens
 " -----------------------------------------------------------------------------
-syn keyword m2SchroedToken CAPACITY COROUTINE LITERAL
+syn keyword m2SchroedToken COROUTINE LITERAL
 
 
 " -----------------------------------------------------------------------------
@@ -85,26 +85,29 @@ syn keyword m2TypeIdent CARDINAL LONGCARD INTEGER LONGINT REAL LONGREAL
 " Builtin Procedure and Function Identifiers
 " -----------------------------------------------------------------------------
 syn keyword m2ProcIdent APPEND INSERT REMOVE SORT SORTNEW
-syn keyword m2FuncIdent CHR ORD ODD ABS SGN MIN MAX LOG2 POW2 ENTIER
-syn keyword m2FuncIdent PRED SUCC PTR COUNT LENGTH
+syn keyword m2FuncIdent CHR UCHR ORD COLLATION ODD ABS SGN MIN MAX LOG2 POW2
+syn keyword m2FuncIdent ENTIER PRED SUCC PTR CAPACITY COUNT LENGTH FIRST LAST
+syn keyword m2FuncIdent PREV NEXT
 
 
 " -----------------------------------------------------------------------------
 " Builtin Macro Identifiers
 " -----------------------------------------------------------------------------
-syn keyword m2MacroIdent NOP TMIN TMAX TSIZE TLIMIT
+syn keyword m2MacroIdent TMIN TMAX TSIZE TLIMIT
 
 
 " -----------------------------------------------------------------------------
 " Builtin Primitives
 " -----------------------------------------------------------------------------
-syn keyword m2PrimitiveIdent SXF VAL STORE VALUE SEEK SUBSET
+syn keyword m2PrimitiveIdent _ATVALUE _KVALUE _ATSTORE _KVSTORE _ATINSERT
+syn keyword m2PrimitiveIdent _ATREMOVE _ALLOC _DEALLOC _STDIN _STDOUT
+syn keyword m2PrimitiveIdent _NEG _SUBSET _SXF _VAL
 
 
 " -----------------------------------------------------------------------------
 " Unsafe Facilities via Pseudo-Module UNSAFE
 " -----------------------------------------------------------------------------
-syn keyword m2UnsafeIdent UNSAFE BYTE WORD LONGWORD OCTETSEQ
+syn keyword m2UnsafeIdent UNSAFE ADDRESS BYTE WORD LONGWORD
 syn keyword m2UnsafeIdent ADD SUB INC DEC SETBIT HALT
 syn keyword m2UnsafeIdent ADR CAST BIT SHL SHR BWNOT BWAND BWOR
 
@@ -296,8 +299,8 @@ syn keyword m2ReswordEnd contained END
 " -----------------------------------------------------------------------------
 " !!! this section must be last !!!
 
-" any '`' '~' '@' '$' '%'
-syn match m2IllegalChar "[`~@$%]"
+" any '`' '~' '$' '%'
+syn match m2IllegalChar "[`~$%]"
 
 " any solitary sequence of '_'
 syn match m2IllegalChar "\<_\+\>"
