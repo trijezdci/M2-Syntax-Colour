@@ -61,4 +61,6 @@ to verify file recognition and syntax colouring.
 Further, check the Syntax menu for a new Modula-2 submenu.
 The submenu should have three choices: PIM, ISO and R10.
 
+![screenshot](https://github.com/trijezdci/M2-Syntax-Colour/blob/master/Vim/Screenshot.png)
+
 +++
