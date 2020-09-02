@@ -3,6 +3,11 @@
 " Maintainer:  B.Kowarsch <trijezdci@moc.liamg>
 " Last Change: 2016 August 22
 
+" ----------------------------------------------------
+" THIS FILE IS LICENSED UNDER THE VIM LICENSE
+" see https://github.com/vim/vim/blob/master/LICENSE
+" ----------------------------------------------------
+
 " Remarks:
 " Vim Syntax files are available for the following Modula-2 dialects:
 " * for the PIM dialect : m2pim.vim

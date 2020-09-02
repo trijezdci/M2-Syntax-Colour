@@ -1,5 +1,11 @@
 (* Modula-2 ISO Test File for Vim Syntax Colouring *)
 
+(* --------------------------------------------------
+ * THIS FILE IS LICENSED UNDER THE VIM LICENSE
+ * see https://github.com/vim/vim/blob/master/LICENSE
+ * -------------------------------------------------- *)
+
+
 DEFINITION MODULE Foobar; (*!m2iso*)
 
 FROM SYSTEM IMPORT LOC, WORD, ADDRESS;

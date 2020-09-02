@@ -1,5 +1,5 @@
 " Vim disambiguation function for .mod files
-" Author: B.Kowarsch <trijezdci@ofni.2-aludom>
+" Author: B.Kowarsch <trijezdci@com.liamg>
 " Last change: 2016 Aug 12
 
 " Installation:
@@ -14,6 +14,11 @@
 "|   \   setf modsim3 |
 "|   \ endif
 " and replace it with the code below:
+
+" ----------------------------------------------------
+" THE FOLLOWING CODE IS LICENSED UNDER THE VIM LICENSE
+" see https://github.com/vim/vim/blob/master/LICENSE
+" ----------------------------------------------------
 
 " *.mod : LambdaProlog, Modsim III or Modula-2
 au BufNewFile,BufRead *.mod call s:FTmod()
@@ -63,6 +68,11 @@ endfunc
 " then search for:
 "| Modula 2 ...
 " and replace the section with the code below:
+
+" ----------------------------------------------------
+" THE FOLLOWING CODE IS LICENSED UNDER THE VIM LICENSE
+" see https://github.com/vim/vim/blob/master/LICENSE
+" ----------------------------------------------------
 
 " Classic Modula-2 (.DEF, .MOD)
 au BufNewFile,BufRead *.DEF,*.MOD       	setf m2pim

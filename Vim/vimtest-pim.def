@@ -1,5 +1,10 @@
 (* Modula-2 PIM Test File for Vim Syntax Colouring *)
 
+(* --------------------------------------------------
+ * THIS FILE IS LICENSED UNDER THE VIM LICENSE
+ * see https://github.com/vim/vim/blob/master/LICENSE
+ * -------------------------------------------------- *)
+
 DEFINITION MODULE Foobar; (*!m2pim*)
 
 FROM SYSTEM IMPORT WORD, ADDRESS;

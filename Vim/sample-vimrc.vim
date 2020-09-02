@@ -1,6 +1,11 @@
 " Example startup script for Vim
 " ~/.vimrc on Posix systems, or ~/_vimrc on Windows
 
+" ----------------------------------------------------
+" THIS FILE IS LICENSED UNDER THE VIM LICENSE
+" see https://github.com/vim/vim/blob/master/LICENSE
+" ----------------------------------------------------
+
 " *** set appearance parameters ***
 
 " show line numbers

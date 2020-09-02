@@ -1,5 +1,10 @@
 (* Modula-2 R10 Test File for Vim Syntax Colouring *) 
 
+(* --------------------------------------------------
+ * THIS FILE IS LICENSED UNDER THE VIM LICENSE
+ * see https://github.com/vim/vim/blob/master/LICENSE
+ * -------------------------------------------------- *)
+
 DEFINITION MODULE Foobar; (*!m2r10*)
 
 IMPORT UNSAFE ALIAS BYTE, WORD, ADDRESS;
@@ -77,9 +82,9 @@ PROCEDURE [+] sum ( a, b : BCD ) : BCD;
 
 PROCEDURE [MOD] modulus ( n, m : INT64 ) : INT64;
 
-PROCEDURE [VALUE] valueForKey ( dict : Dict; key : Key ) : Value;
+PROCEDURE [RETAIN] Retain ( foo : Foo );
 
-PROCEDURE [STORE] StoreValueForKey ( dict : Dict; key : Key; value : Value );
+PROCEDURE [LENGTH] length ( str : String ) : LONGCARD;
 
 
 (* procedures *)
@@ -96,7 +101,7 @@ END END;
 PROCEDURE bar ( foo : Foo ) : INTEGER;
 BEGIN
   IF foo = NIL THEN
-    HALT
+    UNSAFE.HALT
   ELSE
     RETURN foo^.bar
   END (* IF *)
@@ -105,12 +110,12 @@ END bar;
 
 (* technical debt *)
 TO DO ( 1234, Weight.Major ) (* foo *)
-  "redesign foo", 2 * days;
-  "replace foo", 2 * days;
-  "test new foo", 1 * days
+  "redesign foo", 2d;
+  "replace foo", 2d;
+  "test new foo", 1d
 END (* TO DO *);
 
-<*DEPRECATED*> PROCEDURE SetBaba ( n : CARDINAL );
+PROCEDURE SetBaba <*DEPRECATED*> ( n : CARDINAL );
 
   
 (* disabled code *)

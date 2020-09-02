@@ -5,6 +5,11 @@
 "| SynMenu M.Modula\ 2:modula2
 " and replace it with the following code:
 
+" ----------------------------------------------------
+" CODE IN THIS FILE IS LICENSED UNDER THE VIM LICENSE
+" see https://github.com/vim/vim/blob/master/LICENSE
+" ----------------------------------------------------
+
 SynMenu M.Modula-2.R10\ (2010):m2r10
 SynMenu M.Modula-2.ISO\ (1994):m2iso
 SynMenu M.Modula-2.PIM\ (1985):m2pim

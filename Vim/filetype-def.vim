@@ -1,5 +1,5 @@
 " Vim disambiguation function for .def files
-" Author: B.Kowarsch <trijezdci@ofni.2-aludom>
+" Author: B.Kowarsch <trijezdci@moc.liamg>
 " Last change: 2016 Aug 12
 
 " Installation:
@@ -9,6 +9,11 @@
 "| " Microsoft Module Definition
 "| au BufNewFile,BufRead *.def    setf def
 " and replace these two lines with the code below:
+
+" ----------------------------------------------------
+" THE FOLLOWING CODE IS LICENSED UNDER THE VIM LICENSE
+" see https://github.com/vim/vim/blob/master/LICENSE
+" ----------------------------------------------------
 
 " Microsoft Module Definition or Modula-2
 au BufNewFile,BufRead *.def call s:FTdef()
