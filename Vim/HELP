@@ -1,0 +1,25 @@
+Dialect Tags in Modula-2 Source Files
+
+Vim will recognise comments with dialect tags to automatically select a given dialect.
+
+The syntax for a dialect tag comment is:
+
+taggedComment :=
+  '(*!' dialectTag '*)'
+  ;
+
+dialectTag :=
+  m2pim | m2iso | m2r10
+  ;
+
+reserved words
+  m2pim = 'm2pim', m2iso = 'm2iso', m2r10 = 'm2r10'
+
+A dialect tag comment is recognised by Vim if it occurs within the first 200 lines of the source file. Only the very first such comment is recognised, any additional dialect tag comments are ignored.
+
+Example:
+
+DEFINITION MODULE FooLib; (*!m2pim*)
+...
+
+[END OF FILE]
